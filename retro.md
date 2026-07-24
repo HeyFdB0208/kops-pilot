@@ -40,3 +40,32 @@ La promessa "lavorare a più mani senza ripartire da zero" si verifica solo con 
 - [ ] Testare Claude Code sul push (chiude l'attrito 2?)
 - [ ] Coinvolgere Graziano per il primo giro davvero parallelo (stressa claim + handoff tra persone)
 - [ ] In base agli esiti: aggiornare il protocollo a v1.4 con la ripartizione utensili definitiva
+
+---
+
+## Aggiornamento — 2026-07-24, test Claude Code (ipotesi confermata)
+
+**Esito: Claude Code chiude il cerchio.** Append + commit + push riusciti fino a origin/main,
+senza il 403 che bloccava Cowork. L'ipotesi della retro è confermata: è un FATTO, non più un'ipotesi.
+
+**Sfumatura importante:** Claude Code non ha fatto un push banale. Ha risolto problemi git reali —
+switch da HTTPS a SSH (mancavano le credenziali HTTPS in sessione), history divergente gestita con
+`git pull --rebase`, verifica di identità dei file prima di toccarli. Quindi non è "Cowork che pusha":
+è uno strumento che **opera dentro git con competenza**, gestendo situazioni precluse a Cowork (sandbox) e alla chat.
+
+**Ripartizione utensili — ora consolidata dal test:**
+- **Connettore nativo** → lettura dello stato in chat (sola lettura).
+- **Claude Code** → scrittura + versionamento per i filoni git-centrici (come A). Percorso di scrittura CONFERMATO.
+- **Cowork** → consolidamento e knowledge-work non git-nativa (deliverable, documenti). Utile ma non pusha dalla sandbox.
+
+**Decisioni tecniche prese:**
+- Remote `origin` impostato su SSH (chiave id_ed25519). Scelta stabile, mantenuta.
+- Aggiunto `.gitignore` (macOS + Windows + editor) per tenere pulito il repo condiviso prima dell'ingresso di Graziano.
+
+**Attriti residui:** nessuno bloccante sul percorso Claude Code. Cowork resta con push bloccato + lock residui,
+ma non è più il percorso di scrittura per A.
+
+## Prossimi passi (aggiornati)
+- [x] Testare Claude Code sul push → CONFERMATO
+- [ ] Coinvolgere Graziano per il primo giro davvero parallelo (stressa claim + handoff tra persone)
+- [ ] Aggiornare il protocollo a v1.4 con la ripartizione utensili definitiva (connettore=lettura, Claude Code=scrittura repo, Cowork=consolidamento)
