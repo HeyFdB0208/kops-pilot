@@ -4,17 +4,9 @@
 > Regola: dichiara qui il tuo pezzo PRIMA di iniziare, poi scrivi/pusha subito.
 > Lock morbido: se un pezzo è già preso, non lavorarci in parallelo.
 >
-> **Fase DISCOVERY:** un solo filone provvisorio finché i filoni proposti non sono confermati.
+> Disciplina sui file condivisi: append-only su STATO_LAVORI.md, claim prima di scrivere sulla bacheca.
 
 | Filone / pezzo | In carico a | Dal | Stato |
 |---|---|---|---|
-| Discovery — conferma filoni | FdB | 2026-07-24 | in corso |
-
----
-
-## Da attivare dopo la conferma (prima sessione)
-
-| Filone | Proprietario | Note |
-|---|---|---|
-| A — Automazione & infrastruttura | FdB | repo, connettore, Actions |
-| B — Protocollo & casi d'uso | Graziano Greco | testo protocollo, scenari, attriti |
+| A — Automazione & infrastruttura: repo + connettore GitHub | FdB | 2026-07-24 | in corso |
+| B — Protocollo & casi d'uso: struttura minima handoff | Graziano Greco | 2026-07-24 | in corso |
