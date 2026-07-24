@@ -69,3 +69,31 @@ ma non è più il percorso di scrittura per A.
 - [x] Testare Claude Code sul push → CONFERMATO
 - [ ] Coinvolgere Graziano per il primo giro davvero parallelo (stressa claim + handoff tra persone)
 - [ ] Aggiornare il protocollo a v1.4 con la ripartizione utensili definitiva (connettore=lettura, Claude Code=scrittura repo, Cowork=consolidamento)
+
+---
+
+## Aggiornamento — 2026-07-24, lettura in chat: il connettore non è la strada
+
+**Scoperta.** Nel progetto Team "Knowledge-Ops Rhei" la sezione della knowledge di destra è
+"Contesto" e accetta solo upload statici (PDF/documenti/testo), non un collegamento vivo a un repo.
+Il connettore GitHub-in-lettura per la chat di progetto NON è disponibile come avevamo assunto
+(e comunque richiederebbe l'abilitazione di un Owner del Team, che non siamo noi).
+
+**Conseguenza sul modello.** Cade una seconda assunzione della v1.x, gemella della prima:
+- Prima era caduta la SCRITTURA-in-chat via connettore (connettore sola lettura).
+- Ora cade la LETTURA-in-chat via connettore (non disponibile / snapshot statico nel Contesto).
+
+**Ripartizione reale confermata (niente connettore di progetto):**
+- **Lettura dello stato** → Claude Code sul clone locale (il file è lì, sempre fresco, nessun permesso).
+  In alternativa, allegare lo stato alla chat manualmente per un consulto puntuale.
+- **Scrittura + versionamento** → Claude Code (confermato nel giro precedente).
+- **Consolidamento / knowledge-work** → Cowork.
+- Il "Contesto" del progetto resta per il solo materiale STABILE (linee guida, riferimenti), come da protocollo.
+
+**Nota positiva dall'interfaccia:** il progetto mostra Memoria = "Solo tu" (privata per persona) e
+Istruzioni/Contesto = "Tutti gli utenti del progetto" (condivisi). Il modello memorie-private /
+istruzioni-condivise è confermato visivamente.
+
+**Da riflettere nel protocollo (v1.4):** il connettore in lettura NON è un pilastro del modello;
+è opzionale e, sui progetti Team senza abilitazione, semplicemente non c'è. Il pilastro della lettura
+per i filoni git-centrici è Claude Code sul clone locale.
