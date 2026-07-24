@@ -31,3 +31,4 @@ I filoni vivi e i pezzi in corso stanno nella bacheca: vedi `LAVORI_IN_CORSO.md`
 ## Log sessioni
 - 2026-07-24 FdB: inizializzato il pilota, adottato protocollo v1.2, proposti i filoni A/B.
 - 2026-07-24 FdB: chiusa la Discovery, confermati i filoni A/B, aperto il Multiplayer.
+- 2026-07-24 FdB: test di scrittura handoff via Cowork — verifica del flusso di scrittura/commit/push.
