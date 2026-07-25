@@ -57,3 +57,30 @@ Campi che l'Action (filone A) dovrà verificare — solo la FORMA, non la qualit
 
 ## Log sessioni (append)
 - 2026-07-24 FdB: congelato lo schema di handoff (contratto A↔B), messe a verbale le due obiezioni aperte.
+
+cat >> STATO_LAVORI.md << 'EOF'
+
+## Deciso (append — 2026-07-24, esito riunione FdB × Graziano)
+- Il modello a filoni è stato formalizzato da Graziano in SEI oggetti: persone, filoni, decisioni, ASSUNZIONI, questioni aperte, artefatti. Cinque erano già nel pilota; le assunzioni sono il pezzo mancante. · 2026-07-24
+- Aggiunto il campo "Assunzioni" allo schema di handoff (vedi schema v2 sotto). Motivo: senza assunzioni tracciate, il futuro motore di incrocio non può segnalare quando una decisione ne invalida una di un altro filone. · 2026-07-24
+- I tre layer di aggregazione: somma (STATO_LAVORI) e delta (storia git) esistono già; l'INCROCIO (motore proattivo che genera alert tra filoni) è la direzione v2.0, da progettare DOPO il primo giro reale a due. · 2026-07-24
+- Chiarimento sull'esperimento di Graziano: lo stato e l'eventuale grafo vivono nel REPO (o in un DB), letti/scritti dagli utensili (Claude Code, Cowork). NON si scrive "dentro le chat" — limite già verificato. · 2026-07-24
+
+### Schema handoff v2 (supersede la v1 — aggiunge Assunzioni)
+### Handoff — {AAAA-MM-GG} · {persona} · filone {A|B|...}
+- Fatto: artefatti prodotti o output verificabili in questa sessione
+- Assunzioni: basi su cui poggia il lavoro di questa sessione (oppure "nessuna")
+- Deciso: scelte con motivo che vincolano il seguito (oppure "nessuna")
+- Aperto: questioni che condizionano il prossimo passo, ciascuna con owner (oppure "nessuna")
+- Prossimo passo: azione concreta eseguibile · owner: {persona}
+- File toccati: elenco dei file modificati (oppure "nessuno")
+
+Campi che l'Action (filone A) verifica — ora SEI etichette, nell'ordine; forma non qualità.
+
+## Aperto (append — 2026-07-24)
+- v2.0: motore di incrocio (grafo) che genera alert tra filoni — da progettare dopo il giro a due.
+- Prototipo economico dell'incrocio: il consolidatore Cowork ("⚠️ Da riconciliare") è già una versione manuale. Provarlo prima di costruire il grafo.
+
+## Log sessioni (append)
+- 2026-07-24 FdB+Graziano: riunione di allineamento. Modello a sei oggetti, schema handoff v2 (+Assunzioni), direzione v2.0 (motore incrocio) messa a verbale.
+EOF
