@@ -1,6 +1,6 @@
-# Stato lavori — {NOME PROGETTO}
+# Stato lavori — Knowledge-Ops Rhei (pilota)
 
-> Ultimo aggiornamento: {AAAA-MM-GG} · {persona}
+> Ultimo aggiornamento: 2026-07-24 · FdB
 > Protocollo di riferimento: Knowledge-Ops Rhei (README.md)
 > **Fase corrente: DISCOVERY** (sequenziale, un proprietario — NON parallelizzare)
 

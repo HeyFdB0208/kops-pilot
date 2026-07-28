@@ -12,9 +12,6 @@ Una riga breve, verificabile, con owner e stato. Formato:
 
 `- [P-nn] {affermazione} · filone: {A|B|...} · owner: {persona} · stato: {attivo|invalidato} · dal: {AAAA-MM-GG}`
 
-Esempi (da cancellare all'avvio):
-- [P-01] Il prezzo si calcola per postazione, non a consumo · filone: A · owner: {persona} · stato: attivo · dal: {AAAA-MM-GG}
-- [P-02] Lo strumento X è il riferimento ufficiale del progetto · filone: B · owner: {persona} · stato: attivo · dal: {AAAA-MM-GG}
 
 ## Regole
 - Un presupposto invalidato NON si cancella: si marca `stato: invalidato` e si annota chi/quando (traccia il delta).
