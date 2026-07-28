@@ -25,3 +25,13 @@ I filoni vivi e i pezzi in corso stanno nella bacheca: vedi LAVORI_IN_CORSO.md.
 
 ## Log sessioni
 - {AAAA-MM-GG} {persona}: inizializzato il progetto dal template.
+
+## Handoff
+
+### Handoff — 2026-07-24 · FdB · filone A
+- Fatto: depositati i primi presupposti reali in PRESUPPOSTI.md (P-01, P-02)
+- Assunzioni: P-01, P-02 (vedi PRESUPPOSTI.md)
+- Deciso: nessuna
+- Aperto: nessuna
+- Prossimo passo: far provare il deposito presupposti a Graziano sul filone B · owner: Graziano
+- File toccati: PRESUPPOSTI.md, STATO_LAVORI.md

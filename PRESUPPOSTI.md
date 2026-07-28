@@ -22,7 +22,8 @@ Esempi (da cancellare all'avvio):
 - ID incrementale `P-nn`: serve a puntare al presupposto dagli handoff senza riscriverlo.
 
 ## Presupposti attivi
-_(vuoto all'avvio)_
+- [P-01] Il connettore GitHub nativo è in sola lettura: non scrive nel repo · filone: A · owner: FdB · stato: attivo · dal: 2026-07-24
+- [P-02] La scrittura e il push dell'handoff passano da Claude Code, non dalla chat né da Cowork · filone: A · owner: FdB · stato: attivo · dal: 2026-07-24
 
 ## Presupposti invalidati (storico)
 _(vuoto all'avvio)_
